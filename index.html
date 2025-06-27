@@ -1,186 +1,154 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <title>MLM 博客</title>  
-  <style>  
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+<!-- index.html --><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLM 博客导航</title>
+  <style>
     body {
-      margin: 0;
       font-family: 'Noto Serif SC', serif;
-      color: #333;
-      background: url('https://sleep260012.github.io/Asaca-/images/illust_71002388_20250213_001923%20(2).jpg') center center no-repeat;
-      background-size: cover;
-      background-attachment: scroll;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(245, 235, 240, 0.6);
-      z-index: -1;
-    }
-
-    .container {
+      background: #f8f1f1;
+      margin: 0;
+      padding: 0;
       display: flex;
-      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
     }
-
-    nav {
-      width: 220px;
-      background: #fae3e3;
-      padding: 1.5rem 1rem;
-      border-right: 3px solid #800000;
-    }
-
-    nav h1 {
-      font-size: 1.4rem;
-      color: #800000;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    nav a {
-      display: block;
-      margin-bottom: 1rem;
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      background: #fff5f5;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: #f8cfcf;
-    }
-
-    .main {
-      flex: 1;
-      padding: 2rem;
-    }
-
     header {
       background: #b22222;
       color: white;
-      padding: 1.2rem;
+      padding: 2rem;
       text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      border-bottom: 3px solid #800000;
+      font-size: 2rem;
+      width: 100%;
     }
-
-    section {
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.85);
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(180, 100, 100, 0.3);
+    main {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
-
-    .post-card {
-      background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(200, 100, 120, 0.1);
-    }
-
-    .post-card h3 {
-      margin-top: 0;
-      color: #aa2c2c;
-    }
-
-    .post-card .meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    .post-card p {
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
+    a {
+      text-decoration: none;
+      font-size: 1.2rem;
       color: #800000;
-      background: #fff0f0;
-      font-size: 0.9rem;
+      background: #fff5f5;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(180, 100, 100, 0.2);
+      transition: all 0.3s ease;
     }
-
-    #telegram a {
-      color: #b22222;
-      font-weight: bold;
-      text-decoration: underline;
+    a:hover {
+      background: #fcdcdc;
     }
-  </style>  
-</head>  
-<body>  
-  <header>工人阶级的解放应该是工人阶级自己的事情</header>  
-  <div class="container">
-    <nav>
-      <h1>📚 目录</h1>
-      <a href="#articles">杂文评论</a>
-      <a href="#files">推荐阅读</a>
-      <a href="#translation">译文板块</a>
-      <a href="#telegram">图书馆</a>
-    </nav>
-    <div class="main">
-      <section id="articles">  
-        <h2>📝 博客文章</h2>
-        <article class="post-card">  
-          <h3><a href="kiss.html">唯生产力论批判</a></h3>  
-          <div class="meta">📅 2025年6月20日 ｜ 理论</div>  
-          <p>最强大的生产力是革命阶级本身……</p>  
-        </article>
-        <article class="post-card">  
-          <h3><a href="Lgbt.html">谈一些马克思主义与性少数解放的问题</a></h3>  
-          <div class="meta">📅 2025年6月15日 ｜ 性别与阶级</div>  
-          <p>资本主义对性少数的压迫不能简单归结于文化……</p>  
-        </article>
-        <article class="post-card">  
-          <h3><a href="qwq.html">评《致学生—为什么网左不是真正的左翼》</a></h3>  
-          <div class="meta">📅 2025年6月10日 ｜ 评论</div>  
-          <p>炮打知乎毒草……</p>  
-        </article>
-      </section>
-
-      <section id="files">  
-        <h2>📖 推荐阅读</h2>  
-        <ul>  
-          <li><a href="https://github.com/Sleep260012/Asaca-/raw/fdedd3771439eca87baaa4fb2db2076ed1b95dfb/%E7%BB%8F%E6%B5%8E%E6%A0%B8%E7%AE%97%E4%B8%8E%E6%89%80%E6%9C%89%E5%88%B6%E5%BD%A2%E5%BC%8F%EF%BC%88%E5%A4%8F%E5%B0%94%C2%B7%E8%B4%9D%E7%89%B9%E5%85%B0%EF%BC%89.pdf" target="_blank">经济核算与所有制形式</a></li>  
-          <li><a href="https://github.com/Sleep260012/Asaca-/raw/main/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E4%B8%8E%E5%90%8C%E6%80%A7%E6%81%8B%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.pdf" target="_blank">资本主义与同性恋身份认同</a></li>  
-        </ul>  
-      </section>
-
-      <section id="translation">  
-        <h2>🌍 译文板块</h2>  
-        <article class="post-card">  
-          <h3><a href="bettelheim.html">查尔斯·贝特兰：论中国的经济改革</a></h3>  
-          <div class="meta">📅 2025年6月1日 ｜ 翻译</div>  
-          <p>贝特兰在1988年对中国经济改革作出批判性分析……</p>  
-        </article>
-        <article class="post-card">  
-          <h3><a href="karol.html">K.S.卡罗尔：游击队掌权——古巴革命的政治路径</a></h3>  
-          <div class="meta">📅 2025年5月28日 ｜ 翻译</div>  
-          <p>卡罗尔分析了古巴革命与中苏矛盾的关系……</p>  
-        </article>
-      </section>
-
-      <section id="telegram">  
-        <h2>📚 Telegram 图书馆</h2>  
-        <p>欢迎访问我的 Telegram 图书馆，下载更多马列毛主义文献和资料：</p>  
-        <p>👉 <a href="https://t.me/Marx_Mao2025" target="_blank">点击进入 Telegram 图书馆</a></p>  
-      </section>
-
-      <footer>  
-        <p><strong>Maoist © 2025</strong><br>继续革命，永不投降</p>  
-      </footer>
-    </div>
+  </style>
+</head>
+<body>
+  <header>工人阶级的解放应该是工人阶级自己的事情</header>
+  <main>
+    <a href="articles.html">📝 杂文评论</a>
+    <a href="files.html">📖 推荐阅读</a>
+    <a href="translation.html">🌍 译文板块</a>
+    <a href="telegram.html">📚 图书馆</a>
+  </main>
+</body>
+</html><!-- articles.html --><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>杂文评论</title>
+  <style>
+    body { font-family: 'Noto Serif SC', serif; padding: 2rem; background: #fff0f0; }
+    a { color: #aa2222; text-decoration: none; }
+    .post-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(180, 100, 100, 0.2);
+      margin-bottom: 1.5rem;
+    }
+    .meta { font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+  <h1>📝 杂文评论</h1>
+  <div class="post-card">
+    <h2><a href="kiss.html">唯生产力论批判</a></h2>
+    <div class="meta">📅 2025年6月20日 ｜ 理论</div>
+    <p>最强大的生产力是革命阶级本身……</p>
   </div>
+  <div class="post-card">
+    <h2><a href="Lgbt.html">谈一些马克思主义与性少数解放的问题</a></h2>
+    <div class="meta">📅 2025年6月15日 ｜ 性别与阶级</div>
+    <p>资本主义对性少数的压迫不能简单归结于文化……</p>
+  </div>
+  <div class="post-card">
+    <h2><a href="qwq.html">评《致学生—为什么网左不是真正的左翼》</a></h2>
+    <div class="meta">📅 2025年6月10日 ｜ 评论</div>
+    <p>炮打知乎毒草……</p>
+  </div>
+  <p><a href="index.html">← 返回首页</a></p>
+</body>
+</html><!-- files.html --><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>推荐阅读</title>
+  <style>
+    body { font-family: 'Noto Serif SC', serif; padding: 2rem; background: #fef9f9; }
+    ul { line-height: 2; }
+    a { color: #800000; }
+  </style>
+</head>
+<body>
+  <h1>📖 推荐阅读</h1>
+  <ul>
+    <li><a href="https://github.com/Sleep260012/Asaca-/raw/fdedd3771439eca87baaa4fb2db2076ed1b95dfb/经济核算与所有制形式.pdf">经济核算与所有制形式</a></li>
+    <li><a href="https://github.com/Sleep260012/Asaca-/raw/main/资本主义与同性恋身份认同.pdf">资本主义与同性恋身份认同</a></li>
+  </ul>
+  <p><a href="index.html">← 返回首页</a></p>
+</body>
+</html><!-- translation.html --><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>译文板块</title>
+  <style>
+    body { font-family: 'Noto Serif SC', serif; padding: 2rem; background: #fef5f5; }
+    .post-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(180, 100, 100, 0.2);
+      margin-bottom: 1.5rem;
+    }
+    a { color: #aa2222; text-decoration: none; }
+    .meta { font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+  <h1>🌍 译文板块</h1>
+  <div class="post-card">
+    <h2><a href="bettelheim.html">查尔斯·贝特兰：论中国的经济改革</a></h2>
+    <div class="meta">📅 2025年6月1日 ｜ 翻译</div>
+    <p>贝特兰在1988年对中国经济改革作出批判性分析……</p>
+  </div>
+  <div class="post-card">
+    <h2><a href="karol.html">K.S.卡罗尔：游击队掌权——古巴革命的政治路径</a></h2>
+    <div class="meta">📅 2025年5月28日 ｜ 翻译</div>
+    <p>卡罗尔分析了古巴革命与中苏矛盾的关系……</p>
+  </div>
+  <p><a href="index.html">← 返回首页</a></p>
+</body>
+</html><!-- telegram.html --><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Telegram 图书馆</title>
+  <style>
+    body { font-family: 'Noto Serif SC', serif; padding: 2rem; background: #fffafc; }
+    a { color: #b22222; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>📚 Telegram 图书馆</h1>
+  <p>欢迎访问我的 Telegram 图书馆，下载更多马列毛主义文献和资料：</p>
+  <p>👉 <a href="https://t.me/Marx_Mao2025" target="_blank">点击进入 Telegram 图书馆</a></p>
+  <p><a href="index.html">← 返回首页</a></p>
 </body>
 </html>
