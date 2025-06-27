@@ -1,158 +1,182 @@
-<!DOCTYPE html><html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MLM 博客</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Serif SC', serif;
-  color: #333;
-  background: url('https://sleep260012.github.io/Asaca-/images/illust_71002388_20250213_001923%20(2).jpg') center center no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  position: relative;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Serif SC', serif;
+      color: #333;
+      background: url('https://sleep260012.github.io/Asaca-/images/illust_71002388_20250213_001923%20(2).jpg') center center no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      position: relative;
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(245, 235, 240, 0.6);
-  z-index: -1;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(245, 235, 240, 0.6);
+      z-index: -1;
+    }
 
-header {
-  background: #b22222;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  border-bottom: 3px solid #800000;
-}
+    header {
+      background: #b22222;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      border-bottom: 3px solid #800000;
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  background: #fae3e3;
-  padding: 1rem;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      background: #fae3e3;
+      padding: 1rem;
+    }
 
-nav a {
-  color: #800000;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  background: #fff5f5;
-  transition: background 0.3s;
-}
+    nav a {
+      color: #800000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: #fff5f5;
+      transition: background 0.3s;
+    }
 
-nav a:hover {
-  background: #f8cfcf;
-}
+    nav a:hover {
+      background: #f8cfcf;
+    }
 
-section {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.85);
-  margin: 2rem auto;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(180, 100, 100, 0.3);
-}
+    section {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.85);
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(180, 100, 100, 0.3);
+    }
 
-.post-card {
-  background: #fff;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(200, 100, 120, 0.1);
-}
+    .post-card {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(200, 100, 120, 0.1);
+    }
 
-.post-card h3 {
-  margin-top: 0;
-  color: #aa2c2c;
-}
+    .post-card h3 {
+      margin-top: 0;
+      color: #aa2c2c;
+    }
 
-.post-card .meta {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
+    .post-card .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
 
-.post-card p {
-  line-height: 1.6;
-}
+    .post-card p {
+      line-height: 1.6;
+    }
 
-#telegram {
-  text-align: center;
-}
+    #telegram {
+      text-align: center;
+    }
 
-#telegram a {
-  color: #b22222;
-  font-weight: bold;
-  text-decoration: underline;
-}
+    #telegram a {
+      color: #b22222;
+      font-weight: bold;
+      text-decoration: underline;
+    }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #800000;
-  background: #fff0f0;
-  font-size: 0.9rem;
-}
-
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #800000;
+      background: #fff0f0;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <header>工人阶级的解放应该是工人阶级自己的事情</header>  <nav>
+  <header>工人阶级的解放应该是工人阶级自己的事情</header>
+  <nav>
     <a href="#articles">杂文评论</a>
     <a href="#files">推荐阅读</a>
+    <a href="#translations">译文板块</a>
     <a href="#telegram">图书馆</a>
-  </nav>  <section id="articles">
-    <h2>博客文章</h2><article class="post-card">
-  <h3><a href="kiss.html">唯生产力论批判</a></h3>
-  <div class="meta">
-    <span>📅 2025年6月20日</span>
-    <span>📝 理论</span>
-  </div>
-  <p>最强大的生产力是革命阶级本身，生产力与生产关系不是线性决定的关系，阶级斗争与革命是历史前进的火车头……</p>
-</article>
+  </nav>
 
-<article class="post-card">
-  <h3><a href="Lgbt.html">谈一些马克思主义与性少数解放的问题</a></h3>
-  <div class="meta">
-    <span>📅 2025年6月15日</span>
-    <span>📝 性别与阶级</span>
-  </div>
-  <p>资本主义对性少数的压迫不能简单的归结于上层建筑的“文化保守”，必须到资本主义生产关系在生产中寻找根源……</p>
-</article>
+  <section id="articles">
+    <h2>博客文章</h2>
+    <article class="post-card">
+      <h3><a href="kiss.html">唯生产力论批判</a></h3>
+      <div class="meta">
+        <span>📅 2025年6月20日</span>
+        <span>📝 理论</span>
+      </div>
+      <p>最强大的生产力是革命阶级本身，生产力与生产关系不是线性决定的关系，阶级斗争与革命是历史前进的火车头……</p>
+    </article>
 
-<article class="post-card">
-  <h3><a href="qwq.html">评《致学生—为什么网左不是真正的左翼》</a></h3>
-  <div class="meta">
-    <span>📅 2025年6月10日</span>
-    <span>📝 评论</span>
-  </div>
-  <p>炮打知乎毒草《致学生—为什么网左不是真正的左翼》，披着“左翼”外衣也不能掩盖对资本主义的谄媚嘴脸……</p>
-</article>
+    <article class="post-card">
+      <h3><a href="Lgbt.html">谈一些马克思主义与性少数解放的问题</a></h3>
+      <div class="meta">
+        <span>📅 2025年6月15日</span>
+        <span>📝 性别与阶级</span>
+      </div>
+      <p>资本主义对性少数的压迫不能简单的归结于上层建筑的“文化保守”，必须到资本主义生产关系在生产中寻找根源……</p>
+    </article>
 
-  </section>  <section id="files">
+    <article class="post-card">
+      <h3><a href="qwq.html">评《致学生—为什么网左不是真正的左翼》</a></h3>
+      <div class="meta">
+        <span>📅 2025年6月10日</span>
+        <span>📝 评论</span>
+      </div>
+      <p>炮打知乎毒草《致学生—为什么网左不是真正的左翼》，披着“左翼”外衣也不能掩盖对资本主义的谄媚嘴脸……</p>
+    </article>
+  </section>
+
+  <section id="files">
     <h2>推荐阅读</h2>
     <ul>
       <li><a href="https://github.com/Sleep260012/Asaca-/raw/fdedd3771439eca87baaa4fb2db2076ed1b95dfb/%E7%BB%8F%E6%B5%8E%E6%A0%B8%E7%AE%97%E4%B8%8E%E6%89%80%E6%9C%89%E5%88%B6%E5%BD%A2%E5%BC%8F%EF%BC%88%E5%A4%8F%E5%B0%94%C2%B7%E8%B4%9D%E7%89%B9%E5%85%B0%EF%BC%89.pdf" target="_blank">下载《经济核算与所有制形式》</a></li>
       <li><a href="https://github.com/Sleep260012/Asaca-/raw/main/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E4%B8%8E%E5%90%8C%E6%80%A7%E6%81%8B%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.pdf" target="_blank">下载《资本主义与同性恋身份认同》</a></li>
     </ul>
-  </section>  <section id="telegram">
+  </section>
+
+  <section id="translations">
+    <h2>译文板块</h2>
+    <article class="post-card">
+      <h3><a href="soviet-reform.html">苏联经济改革与资本主义复辟</a></h3>
+      <div class="meta">
+        <span>📅 2025年6月24日</span>
+        <span>📝 翻译</span>
+      </div>
+      <p>本文翻译自 Charles Bettelheim 1988 年的分析文章，讨论苏联改革如何为官僚资本主义提供温床……</p>
+    </article>
+  </section>
+
+  <section id="telegram">
     <h2>📚 Telegram 图书馆</h2>
     <p>欢迎访问我的 Telegram 图书馆，下载更多马列毛主义文献和资料：</p>
     <p>
       👉 <a href="https://t.me/Marx_Mao2025" target="_blank">点击进入 Telegram 图书馆</a>
     </p>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <p><strong>Maoist © 2025</strong><br>继续革命，永不投降</p>
   </footer>
 </body>
